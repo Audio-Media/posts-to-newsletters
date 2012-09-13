@@ -583,16 +583,14 @@ add_action( 'add_meta_boxes', 'ptn_add_mailchimp_box' );
 add_action( 'save_post', 'ptn_save_postdata', 200 );
 
 function ptn_add_mailchimp_box($post_type) {
-	if ( get_option('ptn_mailchimp_api_key') != '' ) {
-	    add_meta_box( 
-	        'myplugin_sectionid',
-	        __( 'MailChimp', 'myplugin_textdomain' ),
-	        'ptn_inner_mailchimp_box',
-	        PTN_NEWSLETTER_POST_TYPE,
-	        'side',
-	        'high'
-	    );
-	}
+    add_meta_box( 
+        'myplugin_sectionid',
+        __( 'MailChimp', 'myplugin_textdomain' ),
+        ( get_option('ptn_mailchimp_api_key') != '' ? 'ptn_inner_mailchimp_box' : 'ptn_get_mailchimp_box' ),
+        PTN_NEWSLETTER_POST_TYPE,
+        'side',
+        'high'
+    );
 }
 
 function ptn_setup_mailchimp_api() {
@@ -617,6 +615,12 @@ function ptn_inner_mailchimp_box( $post ) {
     } else {
 		ptn_render_mailchimp_send_form();
 	} 
+}
+
+function ptn_get_mailchimp_box() {
+	echo '<p>Enter your MailChimp API key on the Settings page to be able to send newsletters directly from here.</p>';
+	echo '<p>If you don\'t have one yet, sign up for a <a target="_blank" href="http://eepurl.com/pr9oj">free MailChimp account here</a>.</p>';
+	echo '<p style="text-align:center"><a target="_blank" href="http://eepurl.com/pr9oj"><img src="' . plugins_url('mailchimp.gif', _FILE_) . '"></a></p>';
 }
 
 function ptn_render_create_campaign_form() {
