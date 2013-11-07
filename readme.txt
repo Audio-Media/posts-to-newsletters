@@ -33,6 +33,9 @@ This plugin allows you to easily create newsletters from your posts. You can cus
 
 == Changelog ==
 
+= 1.1 =
+* Added Exygy as contributor
+
 = 1.0 =
 * Initial release
 
