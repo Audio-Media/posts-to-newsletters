@@ -3,7 +3,7 @@ Contributors: jcexygy, exygy
 Tags: newsletter, email, mailchimp, posts
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.01
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ This plugin allows you to easily create newsletters from your posts. You can cus
 
 == Changelog ==
 
-= 1.1 =
+= 1.02 =
 * Added Exygy as contributor
 
 = 1.0 =
