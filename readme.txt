@@ -1,9 +1,9 @@
 === Posts to Newsletters ===
-Contributors: jcexygy, exygy
+Contributors: jcexygy, exygy, pllum
 Tags: newsletter, email, mailchimp, posts
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.02
+Stable tag: 1.03
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,7 @@ This plugin allows you to easily create newsletters from your posts. You can cus
 
 == Frequently Asked Questions ==
 
+Questions/Comments/Bugs? Tweet us @exygy with the #wordpress hashtag!
 
 == Screenshots ==
 
@@ -32,6 +33,9 @@ This plugin allows you to easily create newsletters from your posts. You can cus
 6. You can send a test email or send out the MailChimp campaign directly from Wordpress
 
 == Changelog ==
+
+= 1.03 =
+* Added Pllum as contributor
 
 = 1.02 =
 * Added Exygy as contributor

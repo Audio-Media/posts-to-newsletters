@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Posts to Newsletter
-Plugin URI: 
+Plugin URI: http://exygy.com/posts-to-newsletters-a-new-wordpress-plugin-for-easy-newsletter-creating/
 Description: Create newsletters from posts
 Author: Exygy
 Author URI: http://exygy.com 
-Version: 1.0
+Version: 1.03
 */
 
 define('PTN_PLUGIN_NAME', 'Posts to Newsletter');
