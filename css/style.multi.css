@@ -27,11 +27,11 @@ form {margin: 0; padding: 0;}
 
 .ui-multiselect div.selected { position: relative; padding: 0; margin: 0; border: 0; float:left; }
 .ui-multiselect ul.selected { position: relative; padding: 0; overflow: auto; overflow-x: hidden; background: #fff; margin: 0; list-style: none; border: 0; position: relative; width: 100%; }
-.ui-multiselect ul.selected li { }
+.ui-multiselect ul.selected li { overflow-y: hidden; }
 
 .ui-multiselect div.available { position: relative; padding: 0; margin: 0; border: 0; float:left; border-left: 1px solid; }
 .ui-multiselect ul.available { position: relative; padding: 0; overflow: auto; overflow-x: hidden; background: #fff; margin: 0; list-style: none; border: 0; width: 100%; }
-.ui-multiselect ul.available li { padding-left: 10px; }
+.ui-multiselect ul.available li { padding-left: 10px; overflow-y: hidden; }
  
 .ui-multiselect .ui-state-default { border: none; margin-bottom: 1px; position: relative; padding-left: 20px;}
 .ui-multiselect .ui-state-hover { border: none; }

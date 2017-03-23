@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE HTML>
-<html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
-<body style="margin:0">
-
-<?php
-the_post();  
-the_content();
-?> 
-
-</body></html>
-=======
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -99,6 +87,7 @@ the_content();
 	@style heading 1
 	*/
 		h1{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			display:block;
 			/*@editable*/font-family:Helvetica;
@@ -117,6 +106,7 @@ the_content();
 	@style heading 2
 	*/
 		h2{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#101010 !important;
 			display:block;
 			/*@editable*/font-family:Helvetica;
@@ -135,6 +125,7 @@ the_content();
 	@style heading 3
 	*/
 		h3{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			display:block;
 			/*@editable*/font-family:Helvetica;
@@ -153,6 +144,7 @@ the_content();
 	@style heading 4
 	*/
 		h4{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#404040 !important;
 			display:block;
 			/*@editable*/font-family:Helvetica;
@@ -180,6 +172,7 @@ the_content();
 	@tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
 	*/
 		.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#f2f2f2 !important;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:11px;
@@ -192,8 +185,10 @@ the_content();
 	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
 	*/
 		.preheaderContainer .mcnTextContent a{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#f2f2f2 !important;
 			/*@editable*/font-weight:normal;
+			/*@editable text-decoration:underline;*/
 			/*@editable*/text-decoration:none;
 		}
 	/*
@@ -212,6 +207,7 @@ the_content();
 	@tip Set the styling for your email's header text. Choose a size and color that is easy to read.
 	*/
 		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#f2f2f2 !important;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:15px;
@@ -224,8 +220,10 @@ the_content();
 	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
 	*/
 		.headerContainer .mcnTextContent a{
+			/*@editable color:#6DC6DD;*/
 			/*@editable*/color:#f2f2f2;
 			/*@editable*/font-weight:normal;
+			/*@editable text-decoration:underline;*/
 			/*@editable*/text-decoration:none;
 		}
 	/*
@@ -244,6 +242,7 @@ the_content();
 	@tip Set the styling for your email's body text. Choose a size and color that is easy to read.
 	*/
 		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:15px;
@@ -256,8 +255,10 @@ the_content();
 	@tip Set the styling for your email's body links. Choose a color that helps them stand out from your text.
 	*/
 		.bodyContainer .mcnTextContent a{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			/*@editable*/font-weight:normal;
+			/*@editable text-decoration:underline;*/
 			/*@editable*/text-decoration:none;
 		}
 	/*
@@ -276,6 +277,7 @@ the_content();
 	@tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
 	*/
 		.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:15px;
@@ -288,8 +290,10 @@ the_content();
 	@tip Set the styling for your email's left column links. Choose a color that helps them stand out from your text.
 	*/
 		.leftColumnContainer .mcnTextContent a{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			/*@editable*/font-weight:normal;
+			/*@editable text-decoration:underline;*/
 			/*@editable*/text-decoration:none;
 		}
 	/*
@@ -298,6 +302,7 @@ the_content();
 	@tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
 	*/
 		.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:15px;
@@ -310,8 +315,10 @@ the_content();
 	@tip Set the styling for your email's right column links. Choose a color that helps them stand out from your text.
 	*/
 		.rightColumnContainer .mcnTextContent a{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#000000 !important;
 			/*@editable*/font-weight:normal;
+			/*@editable text-decoration:underline;*/
 			/*@editable*/text-decoration:none;
 		}
 	/*
@@ -330,6 +337,7 @@ the_content();
 	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
 	*/
 		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#f2f2f2 !important;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:11px;
@@ -342,8 +350,10 @@ the_content();
 	@tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
 	*/
 		.footerContainer .mcnTextContent a{
+			/*@editable color:#606060 !important;*/
 			/*@editable*/color:#ffffff !important;
 			/*@editable*/font-weight:normal;
+			/*@editable text-decoration:underline;*/
 			/*@editable*/text-decoration:none;
 		}
 	@media only screen and (max-width: 480px){
@@ -633,4 +643,3 @@ the_content();
 
 	</body>
 </html>
->>>>>>> Audio Media changes
