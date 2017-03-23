@@ -50,10 +50,7 @@ function setup_newsletter_post_type() {
 }
 
 function ptn_setup_custom_fields() {
-<<<<<<< HEAD
-=======
 	// Changed by JF 22-09-2016
->>>>>>> Audio Media changes
 	if ( is_admin() ) { 
 		include_once(dirname(__FILE__) . '/enhanced-custom-fields/enhanced-custom-fields.php');
 		$sections = array();
@@ -82,13 +79,9 @@ function ptn_setup_custom_fields() {
 		
 			// for multiselects, get selected posts and put them at the top in the correct order
 			$featured_post_options = array();
-<<<<<<< HEAD
-			$all_posts = get_post_meta($_GET['post'], '_' . $section, true);
-=======
 			// Added by JF 22-09-2016
 			$all_posts = get_post_meta(isset($_GET['post'])?$_GET['post']:null, '_' . $section, true);
 			//$all_posts = get_post_meta($_GET['post'], '_' . $section, true);
->>>>>>> Audio Media changes
 			$post_IDs = "";
 			$j = 0; 
 			if (is_array($all_posts)) { 
@@ -131,25 +124,12 @@ function ptn_update_newsletter($postID){
 	
 	// get updated content
 	$post = get_post($postID);
-<<<<<<< HEAD
-	if ($post->post_type==PTN_NEWSLETTER_POST_TYPE && ($_POST['update_newsletter']==1 || $post->post_content=='')) {
-
-		$content = get_option('ptn_newsletter_template');			
-		$content = ptn_replace_shortcodes($content);
-		
-=======
-/*	if ($post->post_type==PTN_NEWSLETTER_POST_TYPE) {
-		var_dump($_POST['update_newsletter']);
-		exit();
-	}
-*/
 	if ($post->post_type==PTN_NEWSLETTER_POST_TYPE/* && ($_POST['update_newsletter']==1 || $post->post_content=='')*/) {
 
 		$content = get_option('ptn_newsletter_template');			
 		$content = apply_filters('ptn_replace_shortcodes', $content);
 		$content = ptn_replace_shortcodes($content);
 
->>>>>>> Audio Media changes
 		$content = addslashes($content);
 		$wpdb->query("UPDATE $wpdb->posts SET post_content='$content' WHERE ID=$postID");
 	}
@@ -161,12 +141,6 @@ add_action('save_post','ptn_update_newsletter', 100);
 function ptn_admin_styles_and_scripts() {
 	global $post;
 
-<<<<<<< HEAD
-	if ($post->post_type == PTN_NEWSLETTER_POST_TYPE) {
-		?>
-		<link rel='stylesheet' href='<?php echo plugins_url('css/style.multi.css', __FILE__ ); ?>' type='text/css' media='all' /> 
-		<link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/ui.all.css" />
-=======
 	// Added by JF 22-09-2016
 	if (!$post) {
 		return ;
@@ -179,16 +153,10 @@ function ptn_admin_styles_and_scripts() {
 			// Removed by JF 26-11-2015
 			// <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/ui.all.css" />
 		?>
->>>>>>> Audio Media changes
 				<script type="text/javascript" charset="utf-8">
 		(function($){
 			$(function () { 
 				$(".multiselect").multiselect(); 
-<<<<<<< HEAD
-				$('#titlewrap').prepend('Subject');
-=======
-				//$('#titlewrap').prepend('Subject');
->>>>>>> Audio Media changes
 				
 				<?php 
 				// hide content field when adding new newsletter
@@ -221,13 +189,10 @@ function ptn_admin_styles_and_scripts() {
 
 function ptn_enqueue_scripts() {
 	global $_GET;
-<<<<<<< HEAD
-=======
 	// Added by JF 22-09-2016
 	if (!isset($_GET['post_type']) && !isset($_GET['post'])) {
 		return;
 	}
->>>>>>> Audio Media changes
 	if ($_GET['post_type'] != "") {
 		$post_type = $_GET['post_type'];
 	} else {
@@ -235,13 +200,6 @@ function ptn_enqueue_scripts() {
 		$post_type = $post->post_type;
 	}
 	if ($post_type == PTN_NEWSLETTER_POST_TYPE) {	
-<<<<<<< HEAD
-        wp_deregister_script( 'jquery-ui-core' );
-        wp_register_script( 'jquery-ui-1.8', plugins_url( 'js/jquery-ui-1.8.custom.min.js' , __FILE__ ) );
-        wp_register_script( 'ui-multiselect', plugins_url('js/ui.multiselect.js', __FILE__ ) );
-        
-        wp_enqueue_script( 'jquery-ui-1.8' );
-=======
         // Changed by JF 26-11-2015
         // Use the jquery UI version that WP ships with to avoid conflicts with other plugins.
         //wp_deregister_script( 'jquery-ui-core' );
@@ -249,7 +207,6 @@ function ptn_enqueue_scripts() {
         wp_register_script( 'ui-multiselect', plugins_url('js/ui.multiselect.js', __FILE__ ), array('jquery-core', 'jquery-migrate', 'jquery-ui-core', 'jquery-ui-sortable', 'jquery-ui-widget') );
         
         //wp_enqueue_script( 'jquery-ui-1.8' );
->>>>>>> Audio Media changes
         wp_enqueue_script( 'ui-multiselect' );
     }
 }    
@@ -295,11 +252,7 @@ function ptn_rewrite_flush() {
 }
 
 function ptn_get_default_template() {
-<<<<<<< HEAD
-	$template = <<<ENDTEMPLATE
-=======
 $template = <<<ENDTEMPLATE
->>>>>>> Audio Media changes
 <div bgcolor="#E5DCD0" style="margin:0" alink="#D06D19">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#E5DCD0">
   <tr>
@@ -351,10 +304,6 @@ $template = <<<ENDTEMPLATE
 </table>
 </div>
 ENDTEMPLATE;
-<<<<<<< HEAD
-
-=======
->>>>>>> Audio Media changes
 	return $template;
 }
 
@@ -856,15 +805,11 @@ function ptn_create_mailchimp_campaign() {
 	
 	$opts['title'] = $_POST['post_title'];
 	$opts['generate_text'] = true;
-<<<<<<< HEAD
-	
-=======
 	// Added by JF 10-03-2016
 	$opts['analytics'] = array("google"=>'UPDATE_'.$post->ID);
 	$opts['authenticate'] = true;
 	$opts['folder_id'] = 27873;
 
->>>>>>> Audio Media changes
 	$content = array('url'=> get_permalink($post->ID)); 
 		
 	$api = ptn_setup_mailchimp_api();	

@@ -34,11 +34,7 @@ $.widget("ui.multiselect", {
 		animated: 'fast',
 		show: 'slideDown',
 		hide: 'slideUp',
-<<<<<<< HEAD
-		dividerLocation: 0.6,
-=======
 		dividerLocation: 0.5,
->>>>>>> Audio Media changes
 		nodeComparator: function(node1,node2) {
 			var text1 = node1.text(),
 			    text2 = node2.text();
@@ -213,11 +209,8 @@ $.widget("ui.multiselect", {
 			else
 				item.children('span').removeClass('ui-icon-arrowthick-2-n-s').addClass('ui-helper-hidden').removeClass('ui-icon');
 			item.find('a.action span').addClass('ui-icon-minus').removeClass('ui-icon-plus');
-<<<<<<< HEAD
-=======
 			// Added by JF 26-11-2015
 			item.width('auto');
->>>>>>> Audio Media changes
 			this._registerRemoveEvents(item.find('a.action'));
 			
 		} else {
